@@ -6,4 +6,4 @@ algorithm
     <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=echo9810" />
   </a>
 </div>
----
+
