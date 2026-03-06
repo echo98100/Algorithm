@@ -80,7 +80,7 @@ public class Main {
 			return;
 		}
 		
-		for(int i = 0; i < chicken.size(); i++) {
+		for(int i = start; i < chicken.size(); i++) {
 			comb[depth] = chicken.get(i);
 			combination(i+1, depth+1);
 		}
