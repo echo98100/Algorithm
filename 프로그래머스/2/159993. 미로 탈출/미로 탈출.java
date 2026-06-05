@@ -45,8 +45,10 @@ class Solution {
         
         visited = new boolean[R][C];
         lever = false;
-        
+        // 레버찾기
         int temp = bfs(start_r, start_c, 0);
+        
+        // visited 초기화 후, 레버 좌표를 출발지로 출구 찾기
         visited = new boolean[R][C];
         answer = bfs(start_r, start_c, temp);
         
@@ -69,12 +71,14 @@ class Solution {
                 
                 if(nr>=0 && nr<R && nc>=0 && nc<C) {
                     if(!visited[nr][nc] && map[nr][nc] != 'X'){
+                        //레버를 찾으면 레버 좌표 저장 및 종료
                         if(map[nr][nc] == 'L' && !lever) {
                             start_r = nr;
                             start_c = nc;
                             lever = true;
                             return now.time + 1;
                         }
+                        //레버를 찾은 상태로 출구 도착시 종료
                         if(map[nr][nc] == 'E' && lever) {
                             return now.time + 1;
                         }
