@@ -69,14 +69,12 @@ class Solution {
             
             for(Node next : list[now.index]) {
                 
-                if(dist[next.index] > dist[now.index] + next.cost){
+                if(dist[next.index] > dist[now.index] + next.cost && !visited[next.index]){
                     dist[next.index] = dist[now.index] + next.cost;
                     pq.add(new Node(next.index, dist[next.index]));
                 }
                 
             }
-            
-            
             
         }
         
