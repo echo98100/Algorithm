@@ -11,7 +11,6 @@ class Solution {
             
         }
         
-        
         return participant[participant.length-1];
     }
 }
