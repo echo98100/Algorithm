@@ -1,28 +1,57 @@
 import java.util.*;
 class Solution {
+    
+    static boolean[] visited;
+    
     public int solution(int x, int y, int n) {
         int answer = 0;
         
-        int[] dp = new int[1000001];
+        visited = new boolean[1000001];
         
-        Arrays.fill(dp,Integer.MAX_VALUE);
+        return bfs(x,y,n);
+    }
+    
+    public int bfs(int x, int y, int n) {
         
-        dp[x] = 0;
-
-        for(int i = x; i <= y; i++) {
+        int count = 0;
+        
+        Queue<Integer> q = new ArrayDeque<>();
+        
+        q.add(x);
+        visited[x] = true;
+        
+        while(!q.isEmpty()){
             
-            if(dp[i] == Integer.MAX_VALUE) {
-                continue;
+            int size = q.size();
+            
+            for(int i = 0; i < size; i++) {
+                
+                int now = q.poll();
+                
+                if(now == y) {
+                    return count;
+                }
+                
+                int[] nexts = {
+                    now+n,
+                    now*2,
+                    now*3
+                };
+                
+                for(int next : nexts) {
+                    if(next > y) continue;
+                    if(visited[next]) continue;
+                    
+                    visited[next] = true;
+                    q.add(next);
+                }
+                
             }
             
-            if(i+n <= y) dp[i+n] = Math.min(dp[i+n], dp[i]+1);
-            
-            if(i*2 <= y) dp[i*2] = Math.min(dp[i*2], dp[i]+1);
-            
-            if(i*3 <= y) dp[i*3] = Math.min(dp[i*3], dp[i]+1);
-            
+            count++;
         }
         
-        return dp[y] == Integer.MAX_VALUE ? -1 : dp[y];
+        return -1;
     }
+    
 }
