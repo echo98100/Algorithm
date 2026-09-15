@@ -14,6 +14,7 @@ algorithm
 |  |
 | ------- |
 | [0079-word-search](https://github.com/echo98100/Algorithm/tree/master/0079-word-search) |
+| [0200-number-of-islands](https://github.com/echo98100/Algorithm/tree/master/0200-number-of-islands) |
 | [0746-min-cost-climbing-stairs](https://github.com/echo98100/Algorithm/tree/master/0746-min-cost-climbing-stairs) |
 | [3925-concatenate-array-with-reverse](https://github.com/echo98100/Algorithm/tree/master/3925-concatenate-array-with-reverse) |
 ## Simulation
@@ -36,8 +37,18 @@ algorithm
 |  |
 | ------- |
 | [0079-word-search](https://github.com/echo98100/Algorithm/tree/master/0079-word-search) |
+| [0200-number-of-islands](https://github.com/echo98100/Algorithm/tree/master/0200-number-of-islands) |
 ## Matrix
 |  |
 | ------- |
 | [0079-word-search](https://github.com/echo98100/Algorithm/tree/master/0079-word-search) |
+| [0200-number-of-islands](https://github.com/echo98100/Algorithm/tree/master/0200-number-of-islands) |
+## Breadth-First Search
+|  |
+| ------- |
+| [0200-number-of-islands](https://github.com/echo98100/Algorithm/tree/master/0200-number-of-islands) |
+## Union-Find
+|  |
+| ------- |
+| [0200-number-of-islands](https://github.com/echo98100/Algorithm/tree/master/0200-number-of-islands) |
 <!---LeetCode Topics End-->
