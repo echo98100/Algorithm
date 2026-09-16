@@ -29,6 +29,7 @@ algorithm
 |  |
 | ------- |
 | [0079-word-search](https://github.com/echo98100/Algorithm/tree/master/0079-word-search) |
+| [0205-isomorphic-strings](https://github.com/echo98100/Algorithm/tree/master/0205-isomorphic-strings) |
 ## Backtracking
 |  |
 | ------- |
@@ -51,4 +52,8 @@ algorithm
 |  |
 | ------- |
 | [0200-number-of-islands](https://github.com/echo98100/Algorithm/tree/master/0200-number-of-islands) |
+## Hash Table
+|  |
+| ------- |
+| [0205-isomorphic-strings](https://github.com/echo98100/Algorithm/tree/master/0205-isomorphic-strings) |
 <!---LeetCode Topics End-->
