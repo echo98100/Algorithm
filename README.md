@@ -14,6 +14,7 @@ algorithm
 |  |
 | ------- |
 | [0079-word-search](https://github.com/echo98100/Algorithm/tree/master/0079-word-search) |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/echo98100/Algorithm/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0200-number-of-islands](https://github.com/echo98100/Algorithm/tree/master/0200-number-of-islands) |
 | [0746-min-cost-climbing-stairs](https://github.com/echo98100/Algorithm/tree/master/0746-min-cost-climbing-stairs) |
 | [3925-concatenate-array-with-reverse](https://github.com/echo98100/Algorithm/tree/master/3925-concatenate-array-with-reverse) |
@@ -24,6 +25,7 @@ algorithm
 ## Dynamic Programming
 |  |
 | ------- |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/echo98100/Algorithm/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0746-min-cost-climbing-stairs](https://github.com/echo98100/Algorithm/tree/master/0746-min-cost-climbing-stairs) |
 ## String
 |  |
