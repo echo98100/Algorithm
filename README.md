@@ -17,6 +17,7 @@ algorithm
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/echo98100/Algorithm/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0200-number-of-islands](https://github.com/echo98100/Algorithm/tree/master/0200-number-of-islands) |
 | [0746-min-cost-climbing-stairs](https://github.com/echo98100/Algorithm/tree/master/0746-min-cost-climbing-stairs) |
+| [0875-koko-eating-bananas](https://github.com/echo98100/Algorithm/tree/master/0875-koko-eating-bananas) |
 | [0888-fair-candy-swap](https://github.com/echo98100/Algorithm/tree/master/0888-fair-candy-swap) |
 | [3925-concatenate-array-with-reverse](https://github.com/echo98100/Algorithm/tree/master/3925-concatenate-array-with-reverse) |
 ## Simulation
@@ -82,5 +83,6 @@ algorithm
 ## Binary Search
 |  |
 | ------- |
+| [0875-koko-eating-bananas](https://github.com/echo98100/Algorithm/tree/master/0875-koko-eating-bananas) |
 | [0888-fair-candy-swap](https://github.com/echo98100/Algorithm/tree/master/0888-fair-candy-swap) |
 <!---LeetCode Topics End-->
