@@ -1,44 +1,54 @@
-// 1. BFS
-import java.util.*;
-
+// 2. 유니온 파인드
 class Solution {
 
     static int N;
-    static boolean[] visited;
+    static int[] parent;
 
     public int findCircleNum(int[][] isConnected) {
         
         N = isConnected.length;
 
-        visited = new boolean[N];
+        parent = new int[N];
 
-        int count = 0;
-
+        // 부모를 자기자신으로 초기화 
         for(int i = 0; i < N; i++){
-            if(!visited[i]) {
-                bfs(isConnected, i);
-                count++;
-            }
+            parent[i] = i;
         }
 
-        return count;
-    }
-    
-    public void bfs(int[][] isConnected, int start){
-
-        Queue<Integer> q = new ArrayDeque<>();
-        q.add(start);
-        visited[start] = true;
-
-        while(!q.isEmpty()){
-            int now = q.poll();
-
-            for(int next = 0; next < N; next++){
-                if(!visited[next] && isConnected[now][next] == 1){
-                    q.add(next);
-                    visited[next] = true;
+        for(int r = 0; r < N; r++){
+            for(int c = 0; c < N; c++){
+                if(isConnected[r][c] == 1){
+                    union(r,c);
                 }
             }
         }
+
+        Set<Integer> set = new HashSet<>();
+        for(int i = 0; i < N; i++){
+            set.add(find(i));
+        }
+        return set.size();
+    }
+
+    // find 연산
+    public static int find(int x) {
+        //부모를 찾았으니 부모 리턴
+        if(parent[x] == x) return x;
+
+        // 재귀로 부모 타고 타고 찾기 + 경로 압축
+        return parent[x] = find(parent[x]);
+    }
+
+    // union 연산
+    public static void union(int x, int y) {
+        x = find(x);
+        y = find(y);
+
+        //이미 같은 부모에 속해있는 경우
+        if(x == y) return;
+
+        if(x < y) parent[y] = x;
+        else parent[x] = y;
+        return;
     }
 }
