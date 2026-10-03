@@ -43,6 +43,7 @@ algorithm
 |  |
 | ------- |
 | [0079-word-search](https://github.com/echo98100/Algorithm/tree/master/0079-word-search) |
+| [0104-maximum-depth-of-binary-tree](https://github.com/echo98100/Algorithm/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0200-number-of-islands](https://github.com/echo98100/Algorithm/tree/master/0200-number-of-islands) |
 | [0547-number-of-provinces](https://github.com/echo98100/Algorithm/tree/master/0547-number-of-provinces) |
 ## Matrix
@@ -53,6 +54,7 @@ algorithm
 ## Breadth-First Search
 |  |
 | ------- |
+| [0104-maximum-depth-of-binary-tree](https://github.com/echo98100/Algorithm/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0200-number-of-islands](https://github.com/echo98100/Algorithm/tree/master/0200-number-of-islands) |
 | [0547-number-of-provinces](https://github.com/echo98100/Algorithm/tree/master/0547-number-of-provinces) |
 ## Union-Find
@@ -92,4 +94,12 @@ algorithm
 |  |
 | ------- |
 | [0547-number-of-provinces](https://github.com/echo98100/Algorithm/tree/master/0547-number-of-provinces) |
+## Tree
+|  |
+| ------- |
+| [0104-maximum-depth-of-binary-tree](https://github.com/echo98100/Algorithm/tree/master/0104-maximum-depth-of-binary-tree) |
+## Binary Tree
+|  |
+| ------- |
+| [0104-maximum-depth-of-binary-tree](https://github.com/echo98100/Algorithm/tree/master/0104-maximum-depth-of-binary-tree) |
 <!---LeetCode Topics End-->
