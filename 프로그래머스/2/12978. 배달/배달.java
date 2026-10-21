@@ -1,58 +1,64 @@
 import java.util.*;
+
 class Solution {
+    
+    static int N;
+    
+    static List<Node>[] adjList;
     
     static int[] dist;
     
     static class Node implements Comparable<Node>{
-        int index;
-        int cost;
         
-        public Node(int index, int cost) {
-            this.index = index;
-            this.cost = cost;
+        int to;
+        int weight;
+        
+        public Node (int to, int weight) {
+            this.to = to;
+            this.weight = weight;
         }
         
-        public int compareTo(Node o) {
-            return this.cost - o.cost;
+        @Override
+        public int compareTo(Node o){
+            return o.weight - this.weight;
         }
+        
     }
-    
-    static ArrayList<Node>[] list;
-    static boolean[] visited;
     
     public int solution(int N, int[][] road, int K) {
         int answer = 0;
 
-        list = new ArrayList[N+1];
-        for(int i = 0; i <= N; i++){
-            list[i] = new ArrayList<>();
+        adjList = new ArrayList[N+1];
+        
+        for(int i = 1; i <= N; i++){
+            adjList[i] = new ArrayList<>();
         }
         
-        for(int[] arr : road) {
-            int a = arr[0];
-            int b = arr[1];
-            int c = arr[2];
+        for(int[] r : road) {
             
-            list[a].add(new Node(b, c));
-            list[b].add(new Node(a, c));
+            int from = r[0];
+            int to = r[1];
+            int weight = r[2];
+            
+            adjList[from].add(new Node(to, weight));
+            adjList[to].add(new Node(from, weight));
+            
         }
-        
-        visited = new boolean[N+1];
         
         dijkstra(1, N);
         
         for(int n : dist) {
+            
             if(n <= K) answer++;
+            
         }
-        
-        
-        
+
         return answer;
     }
     
-    public void dijkstra(int start, int num) {
+    public void dijkstra(int start, int N) {
         
-        dist = new int[num+1];
+        dist = new int[N+1];
         Arrays.fill(dist, Integer.MAX_VALUE);
         
         PriorityQueue<Node> pq = new PriorityQueue<>();
@@ -60,23 +66,20 @@ class Solution {
         dist[start] = 0;
         pq.add(new Node(start, 0));
         
-        while(!pq.isEmpty()){
+        while(!pq.isEmpty()) {
             
             Node now = pq.poll();
             
-            if(visited[now.index]) continue;
-            visited[now.index] = true;
-            
-            for(Node next : list[now.index]) {
+            for(Node next : adjList[now.to]){
                 
-                if(dist[next.index] > dist[now.index] + next.cost && !visited[next.index]){
-                    dist[next.index] = dist[now.index] + next.cost;
-                    pq.add(new Node(next.index, dist[next.index]));
+                if(dist[next.to] > dist[now.to] + next.weight){
+                    dist[next.to] = dist[now.to] + next.weight;
+                    
+                    pq.add(new Node(next.to, dist[next.to]));
                 }
                 
             }
             
         }
-        
     }
 }
