@@ -3,29 +3,35 @@ class Solution {
     public long solution(int n, int[] times) {
         long answer = 0;
         
-        //times 중 F -> T 경계값 이분탐색
         Arrays.sort(times);
         
-        long left = 1;
-        long right = (long) times[times.length-1]*n;
+        //시간을 기준으로, 해당 시간에 각 심사관이 몇명을 심사하는지 더해서
+        // 불가능 -> 가능 넘어가는 지점 이분탐색으로 찾기
         
-        while(left <= right){
+        long left = 1;
+        long right = (long)times[times.length-1]*n;
+        
+        while(left <= right) {
             
-            long mid = (left + right)/2;
             long count = 0;
+            long mid = (right+left)/2;
             
             for(int t : times) {
-               count += mid / (long) t;
+                
+                count += mid / (long)t;
+                
             }
             
-            if(count >= n){
+            if(count >= n) {
                 answer = mid;
                 right = mid-1;
-            } else {
+            }
+            else {
                 left = mid+1;
             }
             
         }
+        
         
         
         return answer;
