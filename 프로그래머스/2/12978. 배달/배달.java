@@ -75,6 +75,8 @@ class Solution {
             
             Node now = pq.poll();
             
+            if(now.weight > dist[now.node]) continue;
+            
             // 현재 노드에 연결되어 있는 엣지들을 가져와서 반복
             for(Edge next : adjList[now.node]) {
                 
